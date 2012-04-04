@@ -57,6 +57,8 @@ static gboolean on_write (GIOChannel   *source,
   GError    *local_error   = NULL;
   GIOStatus  ret           = G_IO_STATUS_NORMAL;
 
+  g_usleep (500000);
+
   ret = g_io_channel_write_chars (source,
                                   buf,
                                   sizeof (buf),
